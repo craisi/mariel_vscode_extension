@@ -1,0 +1,25 @@
+{
+  "name": "Mariel",
+  "displayName": "Mariel",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "mariel",
+      "aliases": ["mariel", "mr"],
+      "extensions": [".mr"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "mariel",
+      "scopeName": "source.lg",
+      "path": "./syntaxes/mariel.tmLanguage.json"
+    }]
+  }
+}
