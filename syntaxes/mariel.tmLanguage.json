@@ -35,7 +35,7 @@
 				},
 				{
 					"name": "keyword",
-					"match": "\\b(var|const|true|false|struct|enum|type|interface|pub)\\b|(->)|(=>)"
+					"match": "\\b(var|const|true|false|struct|enum|type|interface|pub|match|ptr|ref|self)\\b|(->)|(=>)"
 				},
 				{
 					"name": "support.type",
@@ -68,6 +68,23 @@
 						{
 							"name": "constant.character.escape.mariel",
 							"match": "\\\\."
+						}
+					]
+				},
+				{
+					"name": "string.quoted.double.mariel",
+					"begin": "(f\"|')",
+					"end": "\\\"",
+					"patterns": [
+						{
+							"name": "constant.character.escape.mariel",
+							"match": "\\{[a-z.0-9,A-Z*_/~-]*\\}|\\\\|\\\\0\\d\\d|\\\\\\w"
+						},
+						{
+							"name": "variable.name.mariel",
+							"begin": "\\$\\{",
+							"end": "\\}",
+							"match": "{[a-z][a-z.0-9A-Z]*|\\$\\{[a-z.0-9,A-Z-]*\\}(\\([.0-9-]+\\))?"
 						}
 					]
 				}
